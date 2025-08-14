@@ -1,0 +1,270 @@
+body{
+  margin: 0;
+  padding: 0;
+ background: linear-gradient(to right,#660000,#390909,#150505,#020000);
+  font-family: sans-serif;
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}  
+body.fade-out {
+    opacity: 1;
+}
+
+.navbar{
+    font-size: 15;
+    border-radius: 50px;
+    padding: 30px 60%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+}
+/*LOGO*/
+.logo{
+    margin-left: -900;
+    color: #f9f871;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px #f5f56e, 0 0 25px #ffcc00;
+}
+/*NAVBAR DÜZENLEMESİ*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0px;
+  border-radius: 13px;
+}
+nav ul:hover{ 
+transition: 0.3s;
+}
+
+nav ul li {
+position: relative;
+}
+
+nav ul li a {
+padding: 0px 40%;
+display: block;
+color: white;
+text-decoration: none;
+padding: 15px 20px;
+font-family: sans-serif;  
+transform: background 0.3s;
+}
+nav ul li a:hover {
+border-radius: 20px;
+box-shadow: 0 0 10px #fbff00, 0 0 15px #fffb00;
+}
+/*Dropdown Menu*/
+nav ul li ul{
+    list-style: none;
+    display: none;
+    gap: px;
+    position: absolute;
+    top: 80%;
+    background-color:#000000;
+    flex-direction: column;
+    min-width: 110px;
+    min-height: 10;
+    z-index: 2;
+}
+
+nav ul li:hover > ul {
+    display: flex;
+}
+nav ul li ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 12px 15px;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+   
+}
+nav ul li ul li a:hover{
+color: #ffcc00;
+text-shadow: 0 0 5px #fff500, 0 0 10px #fff500;
+}
+nav ul li ul li a:hover::after{
+    width: 100%;
+}
+/*SEÇİM YAZISI*/
+.açıklama{
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+  font-size:20px;
+
+  color: #ffffff;
+   text-shadow: 0 0 5px #ff0000, 0 0 10px #000000;
+  font-family:'Press Start 2P',sans-serif;
+}
+.head{
+  position: absolute;
+  top: 15%;
+  z-index: 10;
+  font-size:65px;
+  font-weight: 900;
+  color: #460000;
+   text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  font-family:'Press Start 2P',sans-serif;
+  z-index: -1;
+}
+/*İçaerik Yazısı*/
+.hidden-texts {
+  color: white;
+  font-size: 1.4rem;
+  opacity: 0; /* Başlangıçta görünmez */
+  position: absolute;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease; /* Animasyon ekle */
+}
+.içerik{
+  width: 250px;
+  height: 300;
+  line-height: 1.9;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size:12px;
+  opacity: 0; 
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease; 
+}
+b{
+color: #ffffff;
+text-shadow: 0 0 10px #fff500, 0 0 5px #fff500;
+}
+.card:hover .içerik {
+  opacity: 1; /* Üzerine gelince görünür */
+} 
+/* PAİN'NİN */
+.hidden-tex {
+  color: white;
+  font-size: 1.4rem;
+  opacity: 0; 
+  position: absolute;
+  top: 6%;
+  left: 17px;
+  transition: opacity 0.3s ease; 
+}
+
+.card:hover .hidden-tex {
+  opacity: 1; 
+} 
+
+.card:hover .hidden-texts {
+  opacity: 1; 
+}
+.container{
+    display: flex;
+    gap: 40px;
+}
+
+/*Karakter Kartları*/
+.card{
+    height: 379px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.95s ease, background-size 0.85s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*GÖRSEL*/
+.card.Obito{
+  background:url("https://i.pinimg.com/1200x/64/24/62/642462e1a9eb469f787c23695f6f9b03.jpg") center center no-repeat;
+  background-size: 378px;
+}
+.card.Pain{
+  background:url("https://i.pinimg.com/1200x/78/07/c7/7807c7c1fa9df84dd4e5fd8ebc141a8a.jpg") center center no-repeat;
+  background-size: 385px;
+}
+.card.Itacih{
+  background:url("https://i.pinimg.com/736x/f4/7b/1d/f47b1d104831dddb5686d97cf383f5d1.jpg") center center no-repeat;
+  background-size: 377px;
+}
+.card.Deidara{
+  background:url("https://i.pinimg.com/1200x/a3/a0/0e/a3a00e801025f2a230742bff2385bfd5.jpg") center center no-repeat;
+  background-size: 400px;
+}
+
+/*ZOOM*/
+.card.Obito:hover{
+  background:url("https://i.pinimg.com/1200x/64/24/62/642462e1a9eb469f787c23695f6f9b03.jpg") left center no-repeat ;
+  background-size: 500px;
+  color: #000000;
+  box-shadow: 0 0 4px #ff0000, 0 0 60px #da0000;
+}
+.card.Pain:hover{
+  background:url("https://i.pinimg.com/1200x/78/07/c7/7807c7c1fa9df84dd4e5fd8ebc141a8a.jpg") left center no-repeat ;
+  background-size: 560px;
+  color: #000000;
+  box-shadow: 0 0 4px #ff0000, 0 0 60px #da0000; 
+}
+.card.Itacih:hover{
+ background:url("https://i.pinimg.com/736x/f4/7b/1d/f47b1d104831dddb5686d97cf383f5d1.jpg") left center no-repeat ;
+ background-size: 560px;
+ color: #ff0000;
+ box-shadow: 0 0 4px #ff0000, 0 0 60px #da0000; 
+}
+.card.Deidara:hover{
+ background:url("https://i.pinimg.com/1200x/a3/a0/0e/a3a00e801025f2a230742bff2385bfd5.jpg") left center no-repeat ;
+ background-size: 600px;
+ color: #ff0000;
+ box-shadow: 0 0 4px #ff0000, 0 0 60px #da0000;
+}
+
+/*ÇİZGİ EFEKTİ*/
+.card::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ff0000;
+  color: #ff0000;
+  box-shadow: 0 0 10px #ff0000, 0 0 5px #ff0000;
+  margin-bottom: -110%;
+  left: 0;
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+.card:hover::after{
+  width: 100%;
+}
+
+/*KARARTMA EFEKTİ*/
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.4s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+.card:hover  .card-contents{
+opacity: 1;
+}
+.card:hover::before{
+  background-color:rgba(0, 0, 0, 0.966);
+}
+

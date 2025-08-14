@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right,#fbff01,#a7a402,#a70404,#4e0101);
+    font-family: 'press start 2P',cursive;
+}
+/* genel görünüm*/
+.navbar{
+    font-size: large;
+    border-radius: 50px;
+    padding: 30px 60%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    font-family: sans-serif; 
+}
+/*LOGO*/
+.logo{
+    margin-left: -900;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px #ffffff, 0 0 25px #ffffff;
+}
+/*NAVBAR DÜZENLEMESİ*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0px;
+  border-radius: 13px;
+}
+nav ul:hover{ 
+transition: 0.3s;
+}
+
+nav ul li {
+position: relative;
+}
+
+nav ul li a {
+padding: 0px 40%;
+display: block;
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 15px 20px;
+font-family: sans-serif;  
+transform: background 0.3s;
+}
+nav ul li a:hover {
+border-radius: 20px;
+box-shadow: 0 0 10px #490000, 0 0 15px #ff0000;
+}
+/*Dropdown Menu*/
+nav ul li ul{
+    list-style: none;
+    display: none;
+    gap: px;
+    position: absolute;
+    top: 80%;
+    background-color:rgb(255, 255, 255);
+    flex-direction: column;
+    min-width: 100px;
+    box-shadow: 0 10px 20px rgb(122, 0, 0);
+}
+
+nav ul li:hover > ul {
+    display: flex;
+}
+nav ul li ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+   
+}
+nav ul li ul li a:hover{
+color: #ff0000;
+text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+nav ul li ul li a:hover::after{
+    width: 100%;
+}
+  /*kartlar*/
+/* Genel sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head{
+  position: fixed;
+  top: 20%;
+  z-index: 10;
+  font-size: 65px;
+  font-weight: 900;
+  color: #ffffff;
+   text-shadow: 0 0 10px #ff6600, 0 0 20px #fff500;
+  font-family:'Press Start 2P',sans-serif;
+
+}
+/* Kutuları ortalayan konteyner */
+.container {
+  display: flex;
+  gap:450px;
+}
+
+/* Seçim kutuları */
+.card{
+  top: 60;
+  width: 400px;
+  height: 440px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.card:hover{
+background-color:rgba(0, 0, 0, 0.6);
+transform: scale(1.05);
+}
+/* Hover efekti: koyulaştırma */
+.card:hover .card-content{
+opacity: 1;
+}
+.card:hover::before{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* Her kutuya farklı arka planlar */
+.card:first-child {
+  background-image: url('https://i.pinimg.com/736x/c1/7f/de/c17fde5d4343f10d68cfbf611060623b.jpg');
+}
+
+.card:last-child {
+  background-image: url('https://i.pinimg.com/1200x/c1/9e/dd/c19edd6359ae389efd04bdb9a26cc01b.jpg');
+}
+.card-content {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+/* İçerik kutunun içinde ortalanır ve okunabilir olur */
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  }
+.card-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
